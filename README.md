@@ -16,3 +16,5 @@ docker exec pg14 psql -U user -c "CREATE DATABASE coursedb" postgres
 4. Run the application: `mvn clean spring-boot:run`
 5. Open your favorite browser: http://localhost:8080/courses
 6. Open your favorite browser: http://localhost:8080/teachers
+
+Article Link: https://developer.okta.com/blog/2019/02/20/spring-boot-with-postgresql-flyway-jsonb
