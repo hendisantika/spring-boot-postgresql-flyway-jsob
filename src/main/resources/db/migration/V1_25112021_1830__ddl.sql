@@ -5,6 +5,7 @@ CREATE TABLE course
     rate       INT2 NOT NULL,
     workload   INT4 NOT NULL,
     teacher_id UUID,
+    reviews    jsonb,
     PRIMARY KEY (id)
 );
 
