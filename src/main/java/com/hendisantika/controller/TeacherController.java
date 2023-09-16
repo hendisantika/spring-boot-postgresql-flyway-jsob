@@ -2,14 +2,13 @@ package com.hendisantika.controller;
 
 import com.hendisantika.entity.Review;
 import com.hendisantika.service.TeacherService;
+import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.persistence.EntityNotFoundException;
 
 /**
  * Created by IntelliJ IDEA.

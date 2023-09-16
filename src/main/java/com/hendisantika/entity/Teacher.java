@@ -1,14 +1,11 @@
 package com.hendisantika.entity;
 
+import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import java.util.List;
 
 /**
@@ -29,7 +26,7 @@ public class Teacher extends EntityWithUUID {
     private String pictureURL;
     private String email;
 
-    @Type(type = "jsonb")
+    @Convert(attributeName = "jsonb", converter = JsonBinaryType.class)
     @Column(columnDefinition = "jsonb")
     @Basic(fetch = FetchType.LAZY)
     private List<Review> reviews;
